@@ -1,0 +1,16 @@
+* {
+    --black: #000000;
+    --blue: #4E4FEB;
+    --lightblue: #068FFF;
+    --white: #eeeeee;
+}
+@font-face {
+    font-family: "logo";
+    src: url("./assets/font/Archivo-ExtraBold.ttf") format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: "navLi";
+    src: url("./assets/font/Archivo-Medium.ttf") format('truetype');
+    font-weight: 600;
+}
