@@ -19,8 +19,9 @@ export default {
   left: 0;
   top: 80px;
   width: 100%;
-  height: 200px;
-  border: 2px solid var(--blue);
+  height: 300px;
+  background: var(--lightblack);
+  box-shadow: 0 3px 8px -1px var(--lightblack);
 }
 
 .modal-enter-from {
@@ -32,11 +33,11 @@ export default {
 }
 
 .modal-enter-to {
-  height: 200px;
+  height: 300px;
 }
 
 .modal-leave-from {
-  height: 200px;
+  height: 300px;
 }
 
 .modal-leave-active {
@@ -46,4 +47,5 @@ export default {
 .modal-leave-to {
   height: 0px;
 }
+
 </style>

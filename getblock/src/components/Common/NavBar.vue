@@ -4,11 +4,13 @@
       <Logo/>
       <nav>
         <ul class="navBarUl">
-          <li class="navBarLi" @mouseover="isMouseOver=true" @mouseout="isMouseOver=false">Company</li>
-          <li class="navBarLi" @mouseover="isMouseOver=true" @mouseout="isMouseOver=false">Products</li>
-          <li class="navBarLi" @mouseover="isMouseOver=true" @mouseout="isMouseOver=false">Patent</li>
-          <li class="navBarLi" @mouseover="isMouseOver=true" @mouseout="isMouseOver=false">Application</li>
-          <li class="navBarLi" @mouseover="isMouseOver=true" @mouseout="isMouseOver=false">Inquiry</li>
+          <li class="navBarLi" :class="{navBorderBottom:isNavMouseOver[0]}" @mouseover="mouseOver(0)"
+              @mouseout="mouseOut(0)">Company
+          </li>
+          <li class="navBarLi" :class="{navBorderBottom:isNavMouseOver[1]}" @mouseover="mouseOver(1)" @mouseout="mouseOut(1)">Products</li>
+          <li class="navBarLi" :class="{navBorderBottom:isNavMouseOver[2]}" @mouseover="mouseOver(2)" @mouseout="mouseOut(2)">Patent</li>
+          <li class="navBarLi" :class="{navBorderBottom:isNavMouseOver[3]}" @mouseover="mouseOver(3)" @mouseout="mouseOut(3)">Application</li>
+          <li class="navBarLi" :class="{navBorderBottom:isNavMouseOver[4]}" @mouseover="mouseOver(4)" @mouseout="mouseOut(4)">Inquiry</li>
         </ul>
       </nav>
       <div class="divBlank"/>
@@ -20,6 +22,7 @@
 <script>
 import Logo from "@/components/Common/Logo";
 import NavModal from "@/components/Common/NavModal";
+import './NavBar.css'
 
 export default {
   name: "NavBar",
@@ -27,47 +30,22 @@ export default {
   data() {
     return {
       isMouseOver: false,
+      isNavMouseOver: [false, false, false, false, false]
     }
   },
-  methods: {}
+  methods: {
+    mouseOver(i) {
+      this.isMouseOver = true;
+      this.isNavMouseOver[i] = true
+    },
+    mouseOut(i) {
+      this.isMouseOver = false;
+      this.isNavMouseOver[i] = false
+    }
+  }
 }
 </script>
 
 <style scoped>
-header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 9999;
-  min-width: 1100px;
-  width: max-content;
-}
 
-.navBarWrapper {
-  max-width: 1600px;
-  height: 80px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  text-align: center;
-  align-items: center;
-}
-
-.navBarUl {
-  display: flex;
-  margin-left: 100px;
-}
-
-.navBarLi {
-  font-size: 15px;
-  font-family: logo;
-  margin: 0 20px;
-  color: #333333;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.divBlank {
-  width: 200px;
-}
 </style>

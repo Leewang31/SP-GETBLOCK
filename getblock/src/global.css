@@ -1,8 +1,10 @@
 * {
     --black: #000000;
-    --blue: #4E4FEB;
-    --lightblue: #068FFF;
-    --white: #eeeeee;
+    --white: #F7F7F7;
+    --lightgrey: #EEEEEE;
+    --cement: #929AAB;
+    --lightblack: #393E46;
+
 }
 @font-face {
     font-family: "logo";
