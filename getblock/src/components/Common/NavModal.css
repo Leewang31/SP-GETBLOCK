@@ -1,0 +1,71 @@
+
+.modal {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    height: 200px;
+    background: var(--lightblack);
+    box-shadow: 0 3px 8px -1px var(--lightblack);
+}
+
+.modal-enter-from {
+    height: 0
+}
+
+.modal-enter-active {
+    transition: all 0.4s
+}
+
+.modal-enter-to {
+    height: 200px;
+}
+
+.modal-leave-from {
+    height: 200px;
+}
+
+.modal-leave-active {
+    transition: all 0.4s
+}
+
+.modal-leave-to {
+    height: 0px;
+}
+
+.navModalWrapper {
+    font-size: 15px;
+    font-family: navLi;
+    color: var(--lightgrey);
+    display: flex;
+    margin-left: 300px;
+    justify-content: space-between;
+    text-align: center;
+    width: 600px;
+}
+
+.navModalDetailUl {
+    width: 110px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+}
+
+.navModalDetailLi {
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navModalDetailLi > p {
+    width: fit-content;
+    padding: 3px 5px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.navDetailBorderBottom{
+    box-shadow: 0 2px rgba(238, 238, 238, 0.8);
+}

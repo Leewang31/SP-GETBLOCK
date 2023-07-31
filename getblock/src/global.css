@@ -13,6 +13,6 @@
 }
 @font-face {
     font-family: "navLi";
-    src: url("./assets/font/Archivo-Medium.ttf") format('truetype');
-    font-weight: 600;
+    src: url("./assets/font/Archivo-Thin.ttf") format('truetype');
+    font-weight: 100;
 }
