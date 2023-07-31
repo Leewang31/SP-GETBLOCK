@@ -1,5 +1,5 @@
 <template>
-  <p class="logoDiv">GETBLOCK™</p>
+  <p class="logoDiv" @click="this.$router.push('/')">GETBLOCK™</p>
 </template>
 
 <script>

@@ -1,25 +1,20 @@
 <template>
   <NavBar/>
-  <Home/>
+  <router-view></router-view>
 </template>
 
 <script>
 
 import NavBar from "@/components/Common/NavBar";
-import Home from "@/components/Page/Home";
 
 export default {
   name: 'App',
   components: {
     NavBar,
-    Home,
   }
 }
 </script>
 
 <style>
-body {
 
-  overflow: hidden;
-}
 </style>

@@ -13,6 +13,16 @@
 }
 @font-face {
     font-family: "navLi";
+    src: url("./assets/font/Archivo-Light.ttf") format('truetype');
+}
+@font-face {
+    font-family: "semi-bold";
+    src: url("./assets/font/Archivo-SemiBold.ttf") format('truetype');
+}
+@font-face {
+    font-family: "common";
     src: url("./assets/font/Archivo-Thin.ttf") format('truetype');
-    font-weight: 100;
+}
+body{
+    font-family: common;
 }

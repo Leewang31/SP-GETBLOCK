@@ -8,36 +8,40 @@
     height: 200px;
     background: var(--lightblack);
     box-shadow: 0 3px 8px -1px var(--lightblack);
+    color: rgba(238,238,238,1);
 }
 
 .modal-enter-from {
-    height: 0
+    height: 0;
+    color: rgba(238,238,238,0);
 }
 
 .modal-enter-active {
-    transition: all 0.4s
+    transition: height 0.4s,color 0.2s;
 }
 
 .modal-enter-to {
     height: 200px;
+    color: rgba(238,238,238,1);
 }
 
 .modal-leave-from {
     height: 200px;
+    color: rgba(238,238,238,0);
 }
 
 .modal-leave-active {
-    transition: all 0.4s
+    transition: height 0.4s,color 0.2s;
 }
 
 .modal-leave-to {
     height: 0px;
+    color: rgba(238,238,238,0);
 }
 
 .navModalWrapper {
     font-size: 15px;
     font-family: navLi;
-    color: var(--lightgrey);
     display: flex;
     margin-left: 300px;
     justify-content: space-between;

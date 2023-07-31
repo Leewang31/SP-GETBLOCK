@@ -5,20 +5,20 @@
         <ul class="navModalDetailUl" >
           <li class="navModalDetailLi">
             <p @mouseover="mouseOver(0,0)" @mouseout="mouseOut(0,0)"
-               :class="{navDetailBorderBottom:isNavDetailMouseOver[0][0]}">Introduction</p>
+               :class="{navDetailBorderBottom:isNavDetailMouseOver[0][0]}" @click="this.$router.push('/introduction')">Introduction</p>
           </li>
           <li class="navModalDetailLi"><p @mouseover="mouseOver(0,1)" @mouseout="mouseOut(0,1)"
-                                          :class="{navDetailBorderBottom:isNavDetailMouseOver[0][1]}">History</p></li>
+                                          :class="{navDetailBorderBottom:isNavDetailMouseOver[0][1]}" @click="this.$router.push('/history')">History</p></li>
           <li class="navModalDetailLi"><p @mouseover="mouseOver(0,2)" @mouseout="mouseOut(0,2)"
-                                          :class="{navDetailBorderBottom:isNavDetailMouseOver[0][2]}">Patent</p></li>
+                                          :class="{navDetailBorderBottom:isNavDetailMouseOver[0][2]}" @click="this.$router.push('/patent')">Patent</p></li>
           <li class="navModalDetailLi"><p @mouseover="mouseOver(0,3)" @mouseout="mouseOut(0,3)"
-                                          :class="{navDetailBorderBottom:isNavDetailMouseOver[0][3]}">Organization</p>
+                                          :class="{navDetailBorderBottom:isNavDetailMouseOver[0][3]}" @click="this.$router.push('/organization')">Organization</p>
           </li>
         </ul>
         <ul class="navModalDetailUl">
           <li class="navModalDetailLi"><p @mouseover="mouseOver(1,0)" @mouseout="mouseOut(1,0)"
                                           :class="{navDetailBorderBottom:isNavDetailMouseOver[1][0]}">
-            ChaRacteristics</p>
+            Characteristics</p>
           </li>
           <li class="navModalDetailLi"><p @mouseover="mouseOver(1,1)" @mouseout="mouseOut(1,1)"
                                           :class="{navDetailBorderBottom:isNavDetailMouseOver[1][1]}">Difference</p>
