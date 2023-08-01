@@ -16,7 +16,7 @@ export default {
   font-size: 24px;
   align-content: center;
   justify-content: center;
-  margin-left: 30px;
+  margin-left: 80px;
   padding: 10px 0;
 }
 </style>

@@ -43,13 +43,7 @@ export default {
 </script>
 
 <style scoped>
-.fontHighlight {
-  color: var(--lightblack);
-}
 
-li {
-  padding: 0 3px;
-}
 
 .historyLi {
   display: flex;

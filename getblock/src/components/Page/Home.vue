@@ -20,8 +20,16 @@ name: "Home"
 .locationUl{
   font-size: 12px;
   display: flex;
-  padding: 20px 0 36px 30px;
+  padding: 20px 0 36px 100px;
   align-items: center;
-  color: var(--cement);
+  color: var(--lightblack);
+}
+.fontHighlight {
+  color: var(--black);
+  font-family: navLi;
+  font-size: 11.75px;
+}
+.locationUl > li{
+  padding: 0 5px ;
 }
 </style>

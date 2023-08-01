@@ -56,14 +56,6 @@ export default {
 </script>
 
 <style>
-.fontHighlight {
-  color: var(--lightblack);
-}
-
-li {
-  padding: 0 3px;
-}
-
 .introductionTitle {
   font-family: logo;
   text-align: center;
