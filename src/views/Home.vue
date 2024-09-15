@@ -1,16 +1,15 @@
 <script lang="ts">
-import {defineComponent} from "vue";
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name:'Home',
-  setup(){
-    const count = 0
-    return{
-      count
-    }
-  }
-})
-
+  name: 'Home',
+  setup() {
+    const count = 0;
+    return {
+      count,
+    };
+  },
+});
 </script>
 
 <template>

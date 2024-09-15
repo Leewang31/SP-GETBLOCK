@@ -2,66 +2,66 @@
 import { computed, defineComponent, onMounted, type PropType, ref } from 'vue';
 type SelectPropType = string | number | boolean | Date | undefined;
 export interface ISelectOption {
-	value: string;
-	valueLabel: string;
-	listLabel: string;
-	uuid?: string;
+  value: string;
+  valueLabel: string;
+  listLabel: string;
+  uuid?: string;
 }
 
 export default defineComponent({
-	name: 'ApocSelect',
-	props: {
-		optionList: {
-			type: Array as PropType<ISelectOption[]>,
-			required: true,
-		},
-		selectedValue: {
-			type: Object as PropType<ISelectOption>,
-			required: false,
-		},
-		onChange: {
-			type: Function as PropType<(data: SelectPropType) => void>,
-			required: false,
-		},
-		placeholder: {
-			type: String as PropType<string>,
-			required: false,
-		},
-		disabled: {
-			type: Boolean as PropType<boolean>,
-			required: false,
-		},
-		exceptPlaceholderFromList: {
-			type: Boolean as PropType<boolean>,
-			required: false,
-		},
-	},
-	setup(props) {
-		const optionList = computed(() => props.optionList || []);
-		const listOpened = ref<boolean>(false);
+  name: 'ApocSelect',
+  props: {
+    optionList: {
+      type: Array as PropType<ISelectOption[]>,
+      required: true,
+    },
+    selectedValue: {
+      type: Object as PropType<ISelectOption>,
+      required: false,
+    },
+    onChange: {
+      type: Function as PropType<(data: SelectPropType) => void>,
+      required: false,
+    },
+    placeholder: {
+      type: String as PropType<string>,
+      required: false,
+    },
+    disabled: {
+      type: Boolean as PropType<boolean>,
+      required: false,
+    },
+    exceptPlaceholderFromList: {
+      type: Boolean as PropType<boolean>,
+      required: false,
+    },
+  },
+  setup(props) {
+    const optionList = computed(() => props.optionList || []);
+    const listOpened = ref<boolean>(false);
 
-		const handleSelect = (v?: ISelectOption) => {
-			if (props.disabled) return;
-			if (props.onChange) props.onChange(v?.value || undefined);
-			listOpened.value = false;
-		};
+    const handleSelect = (v?: ISelectOption) => {
+      if (props.disabled) return;
+      if (props.onChange) props.onChange(v?.value || undefined);
+      listOpened.value = false;
+    };
 
-		const clickSelectBox = () => {
-			if (props.disabled) return;
-			listOpened.value = !listOpened.value;
-		};
+    const clickSelectBox = () => {
+      if (props.disabled) return;
+      listOpened.value = !listOpened.value;
+    };
 
-		const closeOptionList = () => {
-			listOpened.value = false;
-		};
+    const closeOptionList = () => {
+      listOpened.value = false;
+    };
 
-		return {
-			handleSelect,
-			listOpened,
-			clickSelectBox,
-			closeOptionList,
-		};
-	},
+    return {
+      handleSelect,
+      listOpened,
+      clickSelectBox,
+      closeOptionList,
+    };
+  },
 });
 </script>
 
