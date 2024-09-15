@@ -1,5 +1,5 @@
 {
-  "name": "vue-typescript-boiler",
+  "name": "getblock",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -14,9 +14,7 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format-test": "biome forma./src",
-    "format": "biome format --write ./src",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "format": "biome format --write ./src"
   },
   "dependencies": {
     "lz-string": "1.5.0",
