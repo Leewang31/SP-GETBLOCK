@@ -1,5 +1,5 @@
-# Node.js 22 버전을 베이스로 사용하는 이미지
-FROM node:22 AS build
+# Node.js 18 버전을 베이스로 사용하는 이미지
+FROM node:18 AS build 
 
 RUN npm install -g pnpm
 
