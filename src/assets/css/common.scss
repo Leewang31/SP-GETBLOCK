@@ -1,0 +1,55 @@
+.apoc-btn {
+	&.primary {
+		background: $colorPrimary;
+		color: $colorWhite;
+		border-radius: 1.25rem;
+		border: 1px solid $colorPrimary;
+		@include font16;
+	}
+	&.secondary {
+		background: $colorWhite;
+		color: $colorPrimary;
+		border-radius: 1.25rem;
+		border: 1px solid $colorPrimary;
+		@include font16;
+	}
+}
+
+.apoc-select {
+	position: relative;
+	.selected-area {
+		min-height: 4rem;
+		cursor: pointer;
+		padding: 3rem;
+		color: $colorPrimary;
+		@include fontBold18;
+	}
+	.option-list-area-wrapper {
+		position: absolute;
+		width: 100%;
+		background: $colorWhite;
+		z-index: 2;
+		overflow-y: auto;
+
+		.option-list-area {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			li {
+				padding: 3rem;
+				cursor: pointer;
+				color: $colorFont;
+			}
+		}
+	}
+
+	.select-arrow-down {
+		background: #ffffff url('/assets/images/common/icons/arrow-down.svg') no-repeat right;
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 15px;
+	}
+}

@@ -1,0 +1,70 @@
+html {
+	/* 루트 요소 폰트 사이즈 */
+	/* 1rem = 8px */
+	font-size: 8px;
+}
+.grid {
+	display: grid;
+	max-width: 160rem;
+	margin: auto;
+	padding: 0 4rem;
+
+	grid-column-gap: 2rem;
+
+	@include tablet {
+		max-width: 128rem;
+		padding: 0 2rem;
+	}
+	@include min-tablet {
+		max-width: 96rem;
+	}
+	@include mobile {
+		padding: 0 2rem;
+	}
+}
+
+/**
+example content
+ */
+.test-example-content {
+	// layout colunm정의
+	@include grid-col(12);
+
+	@include tablet {
+		@include grid-col(8);
+	}
+
+	@include mobile {
+		@include grid-col(4);
+	}
+
+	.test-text {
+		@include grid-area(1, 13);
+
+		@include tablet {
+			@include grid-area(1, 9);
+		}
+
+		@include mobile {
+			@include grid-area(1, 5);
+		}
+
+		&.b-24 {
+			@include fontBold24;
+		}
+		&.b-18 {
+			@include fontBold18;
+		}
+		&.b-16 {
+			@include fontBold16;
+		}
+
+		&.r-18 {
+			@include font18;
+		}
+		&.r-16 {
+			@include font16;
+		}
+	}
+}
+/********************************/

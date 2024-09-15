@@ -1,0 +1,134 @@
+/**
+COLOR LIST
+ */
+// 메인컬러
+$colorPrimary: #8976fd;
+$colorSecondary: #8976fd33;
+$colorTertiary: #8976fd1a;
+//폰트 컬러
+$colorFont: #8976fd;
+//그 외 컬러
+$colorWhite: #ffffff;
+
+/**
+FONT LIST
+ */
+@mixin fontBold24 {
+	font-weight: 700;
+	font-size: 3rem;
+	line-height: 1.5;
+}
+@mixin fontBold18 {
+	font-weight: 700;
+	font-size: 2.25rem;
+	line-height: 1.5;
+}
+@mixin fontBold16 {
+	font-weight: 700;
+	font-size: 2rem;
+	line-height: 1.5;
+}
+@mixin font18 {
+	font-weight: 400;
+	font-size: 2.25rem;
+	line-height: 1.5;
+}
+@mixin font16 {
+	font-weight: 400;
+	font-size: 2rem;
+	line-height: 1.5;
+}
+
+/**
+RESOLUTION LIST
+ */
+@mixin mobile {
+	@media (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin min-tablet {
+	@media (width: 768px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: 768px) and (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin pc {
+	@media (min-width: 1025px) and (max-width: 99999px) {
+		@content;
+	}
+}
+/***************/
+
+/**
+Grid controller
+ */
+@mixin grid-col($colNum) {
+	grid-template-columns: repeat($colNum, 1fr);
+}
+
+/**
+ $startIndex = 시작 인덱스 + 1;
+ $endIndex = 종료 인덱스 + 1;
+ */
+@mixin grid-area($startIndex, $endIndex) {
+	grid-column-start: $startIndex;
+	grid-column-end: $endIndex;
+}
+
+/**
+예제 : @include transform(rotate(0deg));
+ */
+@mixin transform($transform...) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
+	transform: $transform;
+	//image-rendering: pixelated;
+	//image-rendering: -moz-pixelated;
+	//image-rendering: -webkit-pixelated;
+	//image-rendering: -o-pixelated;
+	image-rendering: crisp-edges;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -webkit-crisp-edges;
+	image-rendering: -o-crisp-edges;
+}
+
+/**
+예제 : @include transition(width 0.25s linear);
+ */
+@mixin transition($transition...) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+
+/**
+예제 : @include box-shadow(0px 0px 5px 0 $colorGray);
+ */
+@mixin box-shadow($boxshadow...) {
+	-webkit-box-shadow: $boxshadow;
+	-moz-box-shadow: $boxshadow;
+	box-shadow: $boxshadow;
+}
+
+/**
+예제 : @include border-radius(20px);
+ */
+@mixin border-radius($boxradius...) {
+	-webkit-border-radius: $boxradius;
+	-moz-border-radius: $boxradius;
+	border-radius: $boxradius;
+	overflow: hidden;
+	z-index: 1;
+}
