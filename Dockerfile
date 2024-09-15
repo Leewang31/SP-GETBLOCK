@@ -1,11 +1,14 @@
 # Node.js 22 버전을 베이스로 사용하는 이미지
 FROM node:22 AS build
 
+RUN npm install -g pnpm
+
 # 작업 디렉토리 설정
 WORKDIR /usr/src/app
 
-# package.json 및 package-lock.json 복사
+# package.json 및  pnpm-lock.yaml 복사
 COPY package*.json ./
+COPY pnpm-lock.yaml ./
 
 # 의존성 설치
 RUN pnpm install
