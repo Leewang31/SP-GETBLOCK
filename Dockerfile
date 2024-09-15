@@ -6,9 +6,8 @@ RUN npm install -g pnpm
 # 작업 디렉토리 설정
 WORKDIR /usr/src/app
 
-# package.json 및  pnpm-lock.yaml 복사
+# package.json
 COPY package*.json ./
-COPY pnpm-lock.yaml ./
 
 # 의존성 설치
 RUN pnpm install
