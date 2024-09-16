@@ -26,9 +26,3 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 # 빌드된 Node.js 애플리케이션을 Nginx의 기본 웹 폴더로 복사
 COPY --from=build /usr/src/app/dist /usr/share/nginx/html
-
-# 포트 설정
-# EXPOSE 80
-
-# Nginx 실행
-# CMD ["nginx", "-g", "daemon off;"]
