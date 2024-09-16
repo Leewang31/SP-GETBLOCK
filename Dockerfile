@@ -28,7 +28,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /usr/src/app/dist /usr/share/nginx/html
 
 # 포트 설정
-EXPOSE 80
+# EXPOSE 80
 
 # Nginx 실행
-CMD ["nginx", "-g", "daemon off;"]
+# CMD ["nginx", "-g", "daemon off;"]
